@@ -119,7 +119,7 @@ class LaravelLocalization {
         $this->request = $this->app[ 'request' ];
 
         // set default locale
-        $this->defaultLocale = $this->configRepository->get('app.locale');
+        $this->defaultLocale = $this->configRepository->get('app.fallback_locale');
         $supportedLocales = $this->getSupportedLocales();
 
         if ( empty( $supportedLocales[ $this->defaultLocale ] ) )
